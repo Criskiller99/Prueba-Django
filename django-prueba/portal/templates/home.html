@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>HOME</h1>
+
+<p>Bienvenido aca puedes ver las mejores ofertas laborales, echale un vistazo a estas ofertas:</p>
+
+<ul">
+    {% for Ofertas in ofertas %}
+    <div style="border-style: solid; margin-top:20px;">
+        <li style="list-style: none;">
+            <h2>{{Ofertas.titulo}}</h2>
+        </li>
+        <h3>{{Ofertas.descripcion}}</h3>
+        <h3>Salario: {{Ofertas.salario}}</h3>
+        <h3>Habilidades: {{Ofertas.habilidades}}</h3>
+        <br>
+    </div>
+    {% endfor %}
+</ul>
+
+{% endblock %}
